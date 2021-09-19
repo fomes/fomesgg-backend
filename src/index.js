@@ -14,6 +14,10 @@ app.use(json());
 app.use(cors());
 app.listen(process.env.PORT || 3000);
 
+app.get('/', async (req, res) => {
+  return res.status(200).send('<h1>Home Page</h1>');
+})
+
 app.get("/summoner/:name", async (req, res) => {
   const { name } = req.params;
 
