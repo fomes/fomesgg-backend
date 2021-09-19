@@ -45,7 +45,7 @@ app.get("/summoner/:name", async (req, res) => {
     : rankedRes.data[0];
 
   res.json({
-    iconUrl: `${process.env.LOL_ICONS}/${profileIconId}.png`,
+    iconUrl: `${process.env.LOL_ICONS}${profileIconId}.png`,
     summonerLevel,
     tier,
     rank,
